@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Aplicacion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Menu</string>
+    <string name="title_dashboard">Musica</string>
+    <string name="title_notifications">Mapa</string>
+    <string name="title_times">Tiempo</string>
+    <string name="musica">Musica</string>
+    <string name="mapa">Mapa</string>
+    <string name="menu">Menu</string>
+    <string name="estadistica">Estadistica</string>
+    <string name="tiempo">Tiempo</string>
 </resources>

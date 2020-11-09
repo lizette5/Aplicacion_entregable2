@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/menu" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/mapa"
+        android:title="@string/mapa" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/mussic"
+        android:title="@string/musica" />
+    <item
+        android:id="@+id/navigation_times"
+        android:icon="@drawable/times"
+        android:title="@string/tiempo" />
+</menu>

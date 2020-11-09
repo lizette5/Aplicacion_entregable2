@@ -3,6 +3,7 @@ package com.example.aplicacion;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -70,6 +71,12 @@ public class LoginActivity extends Activity implements LoginView, View.OnClickLi
     @Override
     public void navigateToHome() {
         Toast.makeText(this,"ingreso datos",Toast.LENGTH_SHORT).show();
+        Intent paso=new Intent(this,MainActivity2.class);
+        startActivity(paso);
 
+    }
+    public void Siguiente2(View view){
+        Intent paso=new Intent(this,MainActivity2.class);
+        startActivity(paso);
     }
 }
