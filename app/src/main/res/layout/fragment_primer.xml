@@ -21,7 +21,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#D5EAEC"
                 android:orientation="vertical">
 
                 <TextView
@@ -53,8 +52,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:fontFamily="sans-serif-black"
-                            android:textColor="#000000"
                             android:text="Universidad Nacional de San Agustin"
+                            android:textColor="#000000"
                             android:textStyle="bold" />
 
                         <TextView
@@ -63,8 +62,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:fontFamily="sans-serif"
-                            android:textColor="#000000"
-                            android:text="Introducción  al Desarrollo de Nuevas Plataformas" />
+                            android:text="Introducción  al Desarrollo de Nuevas Plataformas"
+                            android:textColor="#000000" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -78,7 +77,7 @@
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="31dp" />
 
             </LinearLayout>
         </LinearLayout>

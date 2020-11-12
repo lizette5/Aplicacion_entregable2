@@ -1,28 +1,35 @@
 package com.example.aplicacion.ui.times;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimatedVectorDrawable;
+import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.view.ViewTreeObserver;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 
 import com.example.aplicacion.Estadistica;
 import com.example.aplicacion.LoginActivity;
 import com.example.aplicacion.PrimerFragment;
 import com.example.aplicacion.R;
 
-public class TimesFragment extends Fragment {
+public class TimesFragment extends Fragment implements IOnFocusListenable{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -34,6 +41,7 @@ public class TimesFragment extends Fragment {
 
     View view;
     Button siguiente3;
+    AnimationDrawable relojAnimation;
     public TimesFragment() {
         // Required empty public constructor
     }
@@ -49,22 +57,44 @@ public class TimesFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view=inflater.inflate(R.layout.fragment_times, container, false);
+
+        ImageView imageView=(ImageView)view.findViewById(R.id.image) ;
+        imageView.setBackgroundResource(R.drawable.reloj_an);
+        relojAnimation=(AnimationDrawable) imageView.getBackground();
+
+
         siguiente3=(Button)view.findViewById(R.id.siguiente3);
         siguiente3.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),Estadistica.class);
+                Intent intent = new Intent(getActivity(), Estadistica.class);
                 getActivity().startActivity(intent);
             }
+
         });
+
         return view;
     }
+        @Override
+        public void onWindowFocusChanged(boolean hasFocus){
+            super.onMultiWindowModeChanged(hasFocus);
+            relojAnimation.start();
+        }
+
+
+
+
+
   /*  public void Siguiente3(View view){
         Intent paso=new Intent(this, Estadistica.class);
         startActivity(paso);

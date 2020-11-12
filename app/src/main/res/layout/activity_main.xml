@@ -17,12 +17,12 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/inis"
+        android:layout_width="235dp"
+        android:layout_height="51dp"
+        android:background="@drawable/boton_custom"
         android:onClick="Siguiente"
-        android:textColor="#FFFFFF"
         android:text="Iniciar Sesión"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
