@@ -14,6 +14,7 @@ import com.example.aplicacion.Model.LoginInteractorImpl;
 import com.example.aplicacion.Presenter.LoginPresenter;
 import com.example.aplicacion.Presenter.LoginPresenterImpl;
 import com.example.aplicacion.View.LoginView;
+import  android.content.SharedPreferences;
 
 public class LoginActivity extends Activity implements LoginView, View.OnClickListener {
 
@@ -21,6 +22,8 @@ public class LoginActivity extends Activity implements LoginView, View.OnClickLi
     private EditText usuario;
     private EditText password;
     private LoginPresenter presenter;
+    private SharedPreferences preferences;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +33,8 @@ public class LoginActivity extends Activity implements LoginView, View.OnClickLi
         progressBar = findViewById(R.id.progressBar2);
         usuario = findViewById((R.id.edtusername));
         password = findViewById(R.id.edtpassword);
-
+      //  sharedPreferences=getSharedPreferences("loginref",MODE_PRIVATE);
+       // editor=sharedPreferences.edit();
         findViewById(R.id.btnIngresar).setOnClickListener(this);
         presenter = new LoginPresenterImpl(this,new LoginInteractorImpl());
     }
@@ -41,7 +45,18 @@ public class LoginActivity extends Activity implements LoginView, View.OnClickLi
     }
     @Override
     public void onClick(View v) {
-        presenter.validateCredentials(usuario.getText().toString(), password.getText().toString());
+
+        preferences=getSharedPreferences("Presionado",MODE_PRIVATE);
+        String userDetails=preferences.getString(usuario.getText().toString(),password.getText().toString());
+        editor=preferences.edit();
+        editor.putString("Login",userDetails);
+        editor.commit();
+
+        Intent paso=new Intent(this,MainActivity2.class);
+        startActivity(paso);
+
+        //Se esta haciendo uso del sharedPreferences sin uso del presenter
+        //presenter.validateCredentials(usuario.getText().toString(), password.getText().toString());
     }
 
     @Override

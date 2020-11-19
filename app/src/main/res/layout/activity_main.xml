@@ -12,7 +12,7 @@
         android:name="com.example.aplicacion.PrimerFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteX="-54dp"
         tools:layout_editor_absoluteY="0dp"></fragment>
 
     <Button
@@ -25,9 +25,21 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/primer_fragmen"
         app:layout_constraintTop_toTopOf="@+id/primer_fragmen"
-        app:layout_constraintVertical_bias="0.871" />
+        app:layout_constraintVertical_bias="0.747" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="235dp"
+        android:layout_height="58dp"
+        android:background="@drawable/boton_custom"
+        android:text="Registrar usuario"
+        android:textColor="#FFFFFF"
+        android:onClick="Regis"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

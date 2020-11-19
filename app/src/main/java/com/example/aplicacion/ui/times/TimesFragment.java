@@ -82,6 +82,10 @@ public class TimesFragment extends Fragment implements IOnFocusListenable{
             }
 
         });
+        ImageView imageAnimation = (ImageView) view.findViewById(R.id.image);
+        imageAnimation.setBackgroundResource(R.drawable.reloj_an);
+        AnimationDrawable timeAnimation = (AnimationDrawable) imageAnimation.getBackground();
+        timeAnimation.start();
 
         return view;
     }

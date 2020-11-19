@@ -7,12 +7,11 @@
         android:title="@string/menu" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_notifications"
         android:icon="@drawable/mapa"
         android:title="@string/mapa" />
-
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_musica"
         android:icon="@drawable/musica"
         android:title="@string/musica" />
     <item

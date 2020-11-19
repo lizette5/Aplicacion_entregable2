@@ -1,11 +1,14 @@
 package com.example.aplicacion.Presenter;
 
+import android.content.SharedPreferences;
+
 import com.example.aplicacion.Model.LoginInteractor;
 import com.example.aplicacion.View.LoginView;
 
 public class LoginPresenterImpl implements LoginPresenter, LoginInteractor.OnLoginFinishedListener {
 
     private LoginView loginView;
+
 
     public LoginPresenterImpl(LoginView loginView, LoginInteractor loginInteractor) {
         this.loginView = loginView;

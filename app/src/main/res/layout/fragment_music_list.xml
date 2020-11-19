@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="290dp"
+    android:orientation="vertical"
+    android:background="#D9D5EAEC"
+    android:layout_gravity="center"
+    android:layout_height="350dp"
+    tools:context=".ui.dashboard.MusicListF">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lista de musicas"
+        android:background="#00D5EAEC"
+        android:layout_gravity="center"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerpop3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00D5EAEC"
+        tools:layout_editor_absoluteX="187dp"
+        tools:layout_editor_absoluteY="219dp" />
+
+</LinearLayout>

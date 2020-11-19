@@ -11,11 +11,20 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
+    <!-- id-->
+    <!-- la clase a la que apunta-->
+    <!-- nombre label-->
+    <!-- respectivo layout-->
+    <!-- modificaciones :
+    2 archivos java
+    mobile navigation
+    propio fragment
+    menu bottom navigation menu-->
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.aplicacion.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_musica"
+        android:name="com.example.aplicacion.ui.dashboard.MusicFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_music" />
 
     <fragment
         android:id="@+id/navigation_notifications"
