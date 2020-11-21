@@ -24,10 +24,12 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 
+import com.example.aplicacion.Cronometro;
 import com.example.aplicacion.Estadistica;
 import com.example.aplicacion.LoginActivity;
 import com.example.aplicacion.PrimerFragment;
 import com.example.aplicacion.R;
+import com.example.aplicacion.Registro;
 
 public class TimesFragment extends Fragment implements IOnFocusListenable{
     // TODO: Rename parameter arguments, choose names that match
@@ -69,6 +71,15 @@ public class TimesFragment extends Fragment implements IOnFocusListenable{
 
         ImageView imageView=(ImageView)view.findViewById(R.id.image) ;
         imageView.setBackgroundResource(R.drawable.reloj_an);
+        imageView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Cronometro.class);
+                getActivity().startActivity(intent);
+            }
+
+        });
+
         relojAnimation=(AnimationDrawable) imageView.getBackground();
 
 
